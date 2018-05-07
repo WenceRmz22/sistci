@@ -11,6 +11,96 @@ $(document).ready(function(){
 		"CustomerNumber": "Walter",
 		"Invoice": "Hobbs",
 		"Date": "1984/12/24",
+	},{
+		"ID": 1,
+		"CustomerNumber": "John",
+		"Invoice": "Heart",
+		"Date": "1964/03/16",
+	}, {
+		"ID": 14,
+		"CustomerNumber": "Walter",
+		"Invoice": "Hobbs",
+		"Date": "1984/12/24",
+	},{
+		"ID": 1,
+		"CustomerNumber": "John",
+		"Invoice": "Heart",
+		"Date": "1964/03/16",
+	}, {
+		"ID": 14,
+		"CustomerNumber": "Walter",
+		"Invoice": "Hobbs",
+		"Date": "1984/12/24",
+	},{
+		"ID": 1,
+		"CustomerNumber": "John",
+		"Invoice": "Heart",
+		"Date": "1964/03/16",
+	}, {
+		"ID": 14,
+		"CustomerNumber": "Walter",
+		"Invoice": "Hobbs",
+		"Date": "1984/12/24",
+	},{
+		"ID": 1,
+		"CustomerNumber": "John",
+		"Invoice": "Heart",
+		"Date": "1964/03/16",
+	}, {
+		"ID": 14,
+		"CustomerNumber": "Walter",
+		"Invoice": "Hobbs",
+		"Date": "1984/12/24",
+	},{
+		"ID": 1,
+		"CustomerNumber": "John",
+		"Invoice": "Heart",
+		"Date": "1964/03/16",
+	}, {
+		"ID": 14,
+		"CustomerNumber": "Walter",
+		"Invoice": "Hobbs",
+		"Date": "1984/12/24",
+	},{
+		"ID": 1,
+		"CustomerNumber": "John",
+		"Invoice": "Heart",
+		"Date": "1964/03/16",
+	}, {
+		"ID": 14,
+		"CustomerNumber": "Walter",
+		"Invoice": "Hobbs",
+		"Date": "1984/12/24",
+	},{
+		"ID": 1,
+		"CustomerNumber": "John",
+		"Invoice": "Heart",
+		"Date": "1964/03/16",
+	}, {
+		"ID": 14,
+		"CustomerNumber": "Walter",
+		"Invoice": "Hobbs",
+		"Date": "1984/12/24",
+	},{
+		"ID": 1,
+		"CustomerNumber": "John",
+		"Invoice": "Heart",
+		"Date": "1964/03/16",
+	}, {
+		"ID": 14,
+		"CustomerNumber": "Walter",
+		"Invoice": "Hobbs",
+		"Date": "1984/12/24",
+	},{
+		"ID": 1,
+		"CustomerNumber": "John",
+		"Invoice": "Heart",
+		"Date": "1964/03/16",
+	}, {
+		"ID": 14,
+		"CustomerNumber": "Walter",
+		"Invoice": "Hobbs",
+		"Date": "1984/12/24",
 	}];
 	$("#gridContainer").dxDataGrid({
         dataSource: employees,
@@ -29,26 +119,36 @@ $(document).ready(function(){
                     of: window
                 }
             }
+        }, paging: {
+            pageSize: 10
+        },
+        pager: {
+            showPageSizeSelector: true,
+            allowedPageSizes: [5, 10, 20],
+            showInfo: true
         },
         columns: [
             {
                 dataField: "ID",
                 caption: "ID",
-                width: 70
+                width: 100
 			},
 			{
                 dataField: "CustomerNumber",
                 caption: "Customer Number",
-                width: 150
+				width: 160,
+				validationRules: [{ type: "required" }]
 			},
 			{
                 dataField: "Invoice",
                 caption: "Invoice",
-                width: 150
+				width: 160,
+				validationRules: [{ type: "required" }]
             }, 
             {
                 dataField: "Date",
-                dataType: "date"
+				dataType: "date",
+				validationRules: [{ type: "required" }]
             }
         ]
     });

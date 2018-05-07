@@ -132,10 +132,9 @@ $errorMsg = "";
 <html>
 
 <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <title>TCI | Sistema </title>
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -146,7 +145,7 @@ $errorMsg = "";
     <link href="css/style.css" rel="stylesheet">
       <!-- Mainly scripts -->
     <script src="js/jquery-2.1.1.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>window.jQuery || document.write(decodeURIComponent('%3Cscript src="js/jquery-2.1.1.js"%3E%3C/script%3E'))</script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>        
     <!-- Peity -->
@@ -192,7 +191,7 @@ $errorMsg = "";
     <nav class="navbar-default navbar-static-side" role="navigation">
         <div class="sidebar-collapse">
             <ul class="nav metismenu" id="side-menu">
-                <li class="nav-header">
+                <li >
                     <div class="dropdown profile-element"> <span>
                             <img alt="TCI" class="" src="img/tci/L2.png" style="width:100%" />
 
