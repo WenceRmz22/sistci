@@ -1,0 +1,63 @@
+<script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.css">
+<div class="panel panel-default">
+  <div class="panel-heading">Reporte Pedimentos Consolidados</div>
+  <div class="panel-body">
+    <form action="php/reportePedCon.php" method="GET">
+      <div class="row form-horizontal">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label class="control-label col-sm-5">Fecha Inicial:</label>
+              <div class="col-sm-7">
+                    <input type='text'  class="form-control" name="DateInicial" id='DateInicial' required  />
+                  <script type="text/javascript">
+                      $(function () {
+                          $('#DateInicial').datetimepicker({
+                              format: 'YYYY-MM-DD'  
+                          });
+                      });
+                  </script>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label class="control-label col-sm-5" >Fecha Final:</label>
+              <div class="col-sm-7">
+                  <input type='text'  class="form-control" value="" name="DateFinal" id='DateFinal' required  />
+                  <script type="text/javascript">
+                      $(function () {
+                          $('#DateFinal').datetimepicker({
+                              format: 'YYYY-MM-DD'  
+                          });
+                      });
+                  </script>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label class="control-label col-sm-5" >Aduana:</label>
+              <div class="col-sm-7">
+                  <select id="aduana" name="aduana" class="form-control">
+                    <option value="240">240</option>
+                    <option value="270">270</option>
+                  </select>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+                <button class="btn btn-success" id="btnAsignar"  >EXPORTAR A EXCEL</button>
+            </div>
+          </div>
+            
+        </div>
+      </div>
+    </form>
+  		
+  </div>
+      
+     
+  </div>
+</div>
