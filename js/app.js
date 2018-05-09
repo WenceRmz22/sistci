@@ -1,106 +1,24 @@
 $(document).ready(function(){
 
 	//Devextrema begin
+	function bindInvoice(){
+		$.ajax({
+			url : "php/TraerIdInv.php",
+			type : "GET",
+			data : {"InvDate":InvDate,"CustumerNum":CustumerNum,"InvNumber":InvNumber}
+		}).done(function(data){
+				$("#txtInvId").val(data);
+				$("#txtInvCruDateCrossing").prop('disabled', false);
+				$("#txtInvCruTrailerNumber").prop('disabled', false);
+				$("#txtInvCruDescription").prop('disabled', false);
+				$("#txtInvCruAmount").prop('disabled', false);
+			  });
+	}
 	var employees = [{
 		"ID": 1,
 		"CustomerNumber": "John",
 		"Invoice": "Heart",
 		"Date": "1964/03/16",
-	}, {
-		"ID": 14,
-		"CustomerNumber": "Walter",
-		"Invoice": "Hobbs",
-		"Date": "1984/12/24",
-	},{
-		"ID": 1,
-		"CustomerNumber": "John",
-		"Invoice": "Heart",
-		"Date": "1964/03/16",
-	}, {
-		"ID": 14,
-		"CustomerNumber": "Walter",
-		"Invoice": "Hobbs",
-		"Date": "1984/12/24",
-	},{
-		"ID": 1,
-		"CustomerNumber": "John",
-		"Invoice": "Heart",
-		"Date": "1964/03/16",
-	}, {
-		"ID": 14,
-		"CustomerNumber": "Walter",
-		"Invoice": "Hobbs",
-		"Date": "1984/12/24",
-	},{
-		"ID": 1,
-		"CustomerNumber": "John",
-		"Invoice": "Heart",
-		"Date": "1964/03/16",
-	}, {
-		"ID": 14,
-		"CustomerNumber": "Walter",
-		"Invoice": "Hobbs",
-		"Date": "1984/12/24",
-	},{
-		"ID": 1,
-		"CustomerNumber": "John",
-		"Invoice": "Heart",
-		"Date": "1964/03/16",
-	}, {
-		"ID": 14,
-		"CustomerNumber": "Walter",
-		"Invoice": "Hobbs",
-		"Date": "1984/12/24",
-	},{
-		"ID": 1,
-		"CustomerNumber": "John",
-		"Invoice": "Heart",
-		"Date": "1964/03/16",
-	}, {
-		"ID": 14,
-		"CustomerNumber": "Walter",
-		"Invoice": "Hobbs",
-		"Date": "1984/12/24",
-	},{
-		"ID": 1,
-		"CustomerNumber": "John",
-		"Invoice": "Heart",
-		"Date": "1964/03/16",
-	}, {
-		"ID": 14,
-		"CustomerNumber": "Walter",
-		"Invoice": "Hobbs",
-		"Date": "1984/12/24",
-	},{
-		"ID": 1,
-		"CustomerNumber": "John",
-		"Invoice": "Heart",
-		"Date": "1964/03/16",
-	}, {
-		"ID": 14,
-		"CustomerNumber": "Walter",
-		"Invoice": "Hobbs",
-		"Date": "1984/12/24",
-	},{
-		"ID": 1,
-		"CustomerNumber": "John",
-		"Invoice": "Heart",
-		"Date": "1964/03/16",
-	}, {
-		"ID": 14,
-		"CustomerNumber": "Walter",
-		"Invoice": "Hobbs",
-		"Date": "1984/12/24",
-	},{
-		"ID": 1,
-		"CustomerNumber": "John",
-		"Invoice": "Heart",
-		"Date": "1964/03/16",
-	}, {
-		"ID": 14,
-		"CustomerNumber": "Walter",
-		"Invoice": "Hobbs",
-		"Date": "1984/12/24",
 	}];
 	$("#gridContainer").dxDataGrid({
         dataSource: employees,
